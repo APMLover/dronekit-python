@@ -2148,7 +2148,7 @@ class Vehicle(HasObservers):
 
     def play_tune(self, tune):
         '''Request an AUTOPILOT_VERSION packet'''
-        msg = self.message_factory.play_tune_encode(0, 0, tune)
+        msg = self.message_factory.PLAY_TUNE(0, 0, tune)
         self.send_mavlink(msg)
 
     def wait_ready(self, *types, **kwargs):
